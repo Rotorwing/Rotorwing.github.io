@@ -5,8 +5,8 @@ class Node {
         this.vx = 0;
         this.vy = 0;
         this.r = r;
-        this.fill = '#999'
-        this.stroke = '#DDD'
+        this.fill = '#999999'
+        this.stroke = '#DDDDDD'
     }
     draw = function () {
         ctx.beginPath();
@@ -50,7 +50,7 @@ class Bond{
     draw = function () {
         if (this.strength > 0){
             ctx.beginPath();
-            let power = Math.min(this.strength+0.3, 0.8)
+            let power = Math.min(this.strength+0.3, 0.7)
             ctx.lineWidth = this.strokeWidth*power;
             ctx.strokeStyle = '#'+toHex(Math.ceil(power*255)).repeat(3); //this.stroke;
             ctx.moveTo(this.node1.x, this.node1.y);
